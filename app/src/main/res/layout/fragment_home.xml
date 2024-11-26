@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/brown_900"
+    tools:context=".ui.fragment.HomeFragment"
+    android:paddingTop="@dimen/size_24dp"
+    android:paddingStart="@dimen/size_24dp"
+    android:paddingEnd="@dimen/size_24dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logoView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/pipper" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/customerSupportBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/logoView"
+        android:layout_alignBottom="@id/logoView"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/customer_support_btn"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/customer_support_tv"
+        android:textColor="@color/brown_900"
+        android:fontFamily="@font/outfit_semibold"
+        android:textAllCaps="false"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/headerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/logoView"
+        android:layout_marginTop="35dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/available_servers_tv"
+            android:textColor="@color/white_50"
+            android:fontFamily="@font/outfit_semibold"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/expireTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Expire in 30 Days"
+            android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/colorPing"
+            android:textSize="13sp"
+            tools:ignore="SpUsage" />
+
+
+    </LinearLayout>
+
+
+
+<!--    <androidx.appcompat.widget.AppCompatButton-->
+<!--        android:id="@+id/refreshBtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="@dimen/size_36dp"-->
+<!--        android:layout_alignTop="@id/headerView"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:background="@drawable/upgrade_btn"-->
+<!--        android:paddingStart="17dp"-->
+<!--        android:paddingEnd="17dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:text="Refresh Servers"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textColor="@color/white_50"-->
+<!--        android:fontFamily="@font/outfit_semibold"-->
+<!--        android:textSize="13sp"-->
+<!--        tools:ignore="RtlSymmetry" />-->
+
+    <LinearLayout
+        android:id="@+id/refreshBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_alignTop="@id/headerView"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/refresh_bg"
+        android:backgroundTint="@color/colorSelected"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/refreshIc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/refresh_ic"
+            android:tint="@color/brown_900"/>
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerView"
+        android:layout_above="@id/connectBtn"
+        android:layout_marginTop="10dp"
+        tools:listitem="@layout/item_server"
+        tools:itemCount="5"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/loadingLy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerView"
+        android:layout_above="@id/connectBtn"
+        android:layout_marginTop="10dp">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loadingView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/loading_color"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/server_loading2" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connectBtn"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/brown_900"
+        android:clickable="false"
+        android:focusable="false"
+        android:enabled="false">
+
+        <RelativeLayout
+            android:id="@+id/connectView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/connectIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/connect_circle" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/connectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/connectIcon"
+                android:text="Tap to Connect"
+                android:textColor="@color/colorSelected"
+                android:textStyle="bold"
+                android:fontFamily="@font/outfit_semibold"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/halfCircle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="-30dp"
+                android:src="@drawable/half_circle"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/disConnectIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="27dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/disconnect_ic"
+                android:visibility="invisible" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/disConnectText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/disConnectIcon"
+                android:text="Connected With Server"
+                android:fontFamily="@font/outfit_semibold"
+                android:textStyle="bold"
+                android:textColor="@color/brown_900"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

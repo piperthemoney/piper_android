@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brown_900"
+    android:padding="@dimen/size_24dp"
+    tools:context=".ui.fragment.AboutFragment">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/about_piper_tv"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/size_24dp"
+        android:textStyle="bold"
+        tools:ignore="SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/versionTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerText"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_version_tv"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/text_size_15sp"
+        tools:ignore="SpUsage" />
+
+
+    <!--    Privacy Policy-->
+
+    <RelativeLayout
+        android:id="@+id/privacyView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/versionTv"
+        android:layout_marginStart="@dimen/align_margin"
+        android:layout_marginTop="20dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/privacyTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/privacy_tv"
+            android:textColor="@color/white_50"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignTop="@id/privacyTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/align_margin"
+            android:src="@drawable/forward_ic" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0.60dp"
+        android:layout_below="@id/privacyView"
+        android:layout_marginTop="10dp"
+        android:background="@color/white_50" />
+
+
+    <!--Social Media-->
+    <RelativeLayout
+        android:id="@+id/socialMediaView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLayout"
+        android:layout_marginStart="@dimen/align_margin"
+        android:layout_marginTop="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/socialMediaTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/social_media_tv"
+            android:textColor="@color/white_50"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignTop="@id/socialMediaTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/align_margin"
+            android:src="@drawable/forward_ic" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0.60dp"
+        android:layout_below="@id/socialMediaView"
+        android:layout_marginTop="10dp"
+        android:background="@color/white_50" />
+
+
+    <!--Customer Support-->
+    <RelativeLayout
+        android:id="@+id/customerSupportView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewLayout2"
+        android:layout_marginStart="@dimen/align_margin"
+        android:layout_marginTop="10dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/customerSupportTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_support_tv"
+            android:textColor="@color/white_50"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignTop="@id/customerSupportTv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/align_margin"
+            android:src="@drawable/forward_ic" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/viewLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0.60dp"
+        android:layout_below="@id/customerSupportView"
+        android:layout_marginTop="10dp"
+        android:background="@color/white_50" />
+
+
+</RelativeLayout>

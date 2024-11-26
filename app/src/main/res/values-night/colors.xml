@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPing">#0BCC33</color>
+    <color name="colorPing2">#0BCC33</color>
+    <color name="colorPingRed">#FF0099</color>
+    <color name="colorConfigType">#f97910</color>
+
+    <color name="color_fab_active">#C12A2A</color>
+    <color name="color_fab_inactive">#38933C</color>
+    <color name="color_secondary">#727272</color>
+
+    <color name="colorPrimary">#F5F5F5</color>
+    <color name="colorAccent">#FF5722</color>
+
+    <color name="brown_900">#100d0e</color>
+    <color name="white_50">#fefefe</color>
+    <color name="white_400">#f7f7f7</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="colorSelected">#1ADDFF</color>
+    <color name="colorUnselected">#9AA0A6</color>
+    <color name="nav_color">#2F3033</color>
+    <color name="loading_color">#04DAFF</color>
+
+    <color name="bad_signal_color">#F55200</color>
+    <color name="middle_signal_color">#FFFF00</color>
+    <color name="good_signal_color">#35C658</color>
+
+    <color name="disable_bg">#025766</color>
+    <color name="disable_ic">#A6A6A6</color>
+</resources>
