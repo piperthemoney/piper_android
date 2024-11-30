@@ -27,7 +27,7 @@ object RetrofitClient {
                 // TODO: Fetch url based on connection status
                 activeBaseUrl = SiteChecker().getFirstActiveUrl(urls) ?: BASE_URL1
                 // Temporary fix to use currently active url [BASE_URL_2]
-                activeBaseUrl = BASE_URL2
+                activeBaseUrl = BASE_URL1
                 retrofitInstance = Retrofit.Builder()
                     .baseUrl(activeBaseUrl!!)
                     .addConverterFactory(GsonConverterFactory.create())
