@@ -3,7 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
-//        maven("https://jitpack.io")
+        maven("https://jitpack.io")
     }
 }
 dependencyResolutionManagement {
@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         jcenter()
-//        maven("https://jitpack.io")
+        maven("https://jitpack.io")
     }
 }
 rootProject.name = "Piper"

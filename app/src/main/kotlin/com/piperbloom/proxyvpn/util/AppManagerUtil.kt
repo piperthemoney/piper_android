@@ -20,15 +20,15 @@ object AppManagerUtil {
 
             val applicationInfo = pkg.applicationInfo
 
-            val appName = applicationInfo.loadLabel(packageManager).toString()
-            val appIcon = applicationInfo.loadIcon(packageManager)
-            val isSystemApp = applicationInfo.flags and ApplicationInfo.FLAG_SYSTEM > 0
+            val appName = applicationInfo?.loadLabel(packageManager).toString()
+            val appIcon = applicationInfo?.loadIcon(packageManager)
+            val isSystemApp = applicationInfo?.flags!! and ApplicationInfo.FLAG_SYSTEM > 0
 
             val appInfo =
                 com.piperbloom.proxyvpn.dto.AppInfo(
                     appName,
                     pkg.packageName,
-                    appIcon,
+                    appIcon!!,
                     isSystemApp,
                     0
                 )

@@ -24,7 +24,10 @@ object RetrofitClient {
         if (initializationDeferred == null) {
             initializationDeferred = CoroutineScope(Dispatchers.IO).async {
                 val urls = listOf(BASE_URL1, BASE_URL2, BASE_URL3)
+                // TODO: Fetch url based on connection status
                 activeBaseUrl = SiteChecker().getFirstActiveUrl(urls) ?: BASE_URL1
+                // Temporary fix to use currently active url [BASE_URL_2]
+                activeBaseUrl = BASE_URL2
                 retrofitInstance = Retrofit.Builder()
                     .baseUrl(activeBaseUrl!!)
                     .addConverterFactory(GsonConverterFactory.create())

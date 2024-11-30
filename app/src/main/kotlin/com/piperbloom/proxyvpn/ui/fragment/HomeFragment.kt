@@ -59,7 +59,7 @@ import com.piperbloom.proxyvpn.viewmodel.LoginViewModelFactory
 import com.piperbloom.proxyvpn.viewmodel.MainViewModel
 import com.piperbloom.proxyvpn.viewmodel.ServerViewModel
 import com.piperbloom.proxyvpn.viewmodel.SocialMediaAndSupportViewModel
-import com.tbruyelle.rxpermissions.RxPermissions
+import com.tbruyelle.rxpermissions3.RxPermissions
 import com.tencent.mmkv.MMKV
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
