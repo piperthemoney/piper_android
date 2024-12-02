@@ -13,12 +13,12 @@ android {
         targetSdk = 34
 
 //        Release Version
-//        versionCode = 4
-//        versionName = "1.0.4"
-
-//        TEST VERSION
         versionCode = 4
         versionName = "1.0.4"
+
+//        TEST VERSION
+//        versionCode = 4
+//        versionName = "1.0.4"
 
         multiDexEnabled = true
         splits.abi {
@@ -170,6 +170,11 @@ android {
         implementation("com.airbnb.android:lottie:6.0.0")
 
         implementation("cat.ereza:customactivityoncrash:2.3.0")
+
+        // Network interceptor
+        debugImplementation ("com.github.chuckerteam.chucker:library:4.0.0")
+        releaseImplementation ("com.github.chuckerteam.chucker:library-no-op:4.0.0")
+        implementation("com.squareup.okhttp3:okhttp:4.12.0")
 
     }
 }

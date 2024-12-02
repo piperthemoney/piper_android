@@ -92,7 +92,7 @@ class SplashActivity : AppCompatActivity() {
 //        binding.animationView.setAnimation(R.raw.splash)
         binding.animationView.playAnimation()
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(applicationContext)
             setupViewModel()
         }
         setTimer()

@@ -80,7 +80,7 @@ class AboutFragment : Fragment() {
 
         setUpVersionName()
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(requireContext())
             setUpViewModel()
         }
         setUpListener()

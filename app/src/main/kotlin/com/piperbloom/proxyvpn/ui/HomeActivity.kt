@@ -53,7 +53,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(applicationContext)
             setUpViewModel()
         }
 
@@ -227,7 +227,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(applicationContext)
             setUpViewModel()
             SharedPrefManager.getCode(this@HomeActivity)?.let { viewModel.activateUserCode(it) }
         }
