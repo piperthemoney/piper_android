@@ -37,9 +37,9 @@ interface ApiService {
     @GET(SUPPORT_URL)
     fun getSupportData(): Call<SupportResponse>
 
-//    @GET(VERSION_URL)
-//    fun getVersionData(): Call<VersionResponse>
-
-    @GET(PRE_VERSION_URL)
+    @GET(VERSION_URL)
     fun getVersionData(): Call<VersionResponse>
+
+//    @GET(PRE_VERSION_URL)
+//    fun getVersionData(): Call<VersionResponse>
 }
