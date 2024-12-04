@@ -70,8 +70,8 @@ class LoginActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.Main).launch {
             RetrofitClient.initialize(applicationContext)
             setUpViewModel()
+            setUpListener()
         }
-        setUpListener()
     }
 
     private fun setUpViewModel() {
