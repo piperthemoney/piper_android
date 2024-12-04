@@ -13,12 +13,12 @@ android {
         targetSdk = 34
 
 //        Release Version
-        versionCode = 4
-        versionName = "1.0.4"
+        versionCode = 7
+        versionName = "1.0.7"
 
 //        TEST VERSION
-//        versionCode = 4
-//        versionName = "1.0.4"
+//        versionCode = 7
+//        versionName = "1.0.7"
 
         multiDexEnabled = true
         splits.abi {

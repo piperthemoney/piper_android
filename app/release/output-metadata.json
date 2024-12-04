@@ -5,7 +5,7 @@
     "kind": "Directory"
   },
   "applicationId": "com.piperbloom.proxyvpn",
-  "variantName": "release",
+  "variantName": "debug",
   "elements": [
     {
       "type": "UNIVERSAL",
@@ -14,32 +14,6 @@
       "versionCode": 4000004,
       "versionName": "1.0.4",
       "outputFile": "Piper_1.0.4_all.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "armeabi-v7a"
-        }
-      ],
-      "attributes": [],
-      "versionCode": 4000004,
-      "versionName": "1.0.4",
-      "outputFile": "Piper_1.0.4_armeabi-v7a.apk"
-    },
-    {
-      "type": "ONE_OF_MANY",
-      "filters": [
-        {
-          "filterType": "ABI",
-          "value": "arm64-v8a"
-        }
-      ],
-      "attributes": [],
-      "versionCode": 4000004,
-      "versionName": "1.0.4",
-      "outputFile": "Piper_1.0.4_arm64-v8a.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -66,32 +40,34 @@
       "versionCode": 4000004,
       "versionName": "1.0.4",
       "outputFile": "Piper_1.0.4_x86_64.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "armeabi-v7a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 4000004,
+      "versionName": "1.0.4",
+      "outputFile": "Piper_1.0.4_armeabi-v7a.apk"
+    },
+    {
+      "type": "ONE_OF_MANY",
+      "filters": [
+        {
+          "filterType": "ABI",
+          "value": "arm64-v8a"
+        }
+      ],
+      "attributes": [],
+      "versionCode": 4000004,
+      "versionName": "1.0.4",
+      "outputFile": "Piper_1.0.4_arm64-v8a.apk"
     }
   ],
   "elementType": "File",
-  "baselineProfiles": [
-    {
-      "minApi": 28,
-      "maxApi": 30,
-      "baselineProfiles": [
-        "baselineProfiles/1/Piper_1.0.4_all.dm",
-        "baselineProfiles/1/Piper_1.0.4_armeabi-v7a.dm",
-        "baselineProfiles/1/Piper_1.0.4_arm64-v8a.dm",
-        "baselineProfiles/1/Piper_1.0.4_x86.dm",
-        "baselineProfiles/1/Piper_1.0.4_x86_64.dm"
-      ]
-    },
-    {
-      "minApi": 31,
-      "maxApi": 2147483647,
-      "baselineProfiles": [
-        "baselineProfiles/0/Piper_1.0.4_all.dm",
-        "baselineProfiles/0/Piper_1.0.4_armeabi-v7a.dm",
-        "baselineProfiles/0/Piper_1.0.4_arm64-v8a.dm",
-        "baselineProfiles/0/Piper_1.0.4_x86.dm",
-        "baselineProfiles/0/Piper_1.0.4_x86_64.dm"
-      ]
-    }
-  ],
   "minSdkVersionForDexing": 21
 }
