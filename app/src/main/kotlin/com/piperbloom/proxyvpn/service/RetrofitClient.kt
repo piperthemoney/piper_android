@@ -7,6 +7,7 @@ import com.piperbloom.proxyvpn.BuildConfig
 import com.piperbloom.proxyvpn.BuildConfig.BASE_URL1
 import com.piperbloom.proxyvpn.BuildConfig.BASE_URL2
 import com.piperbloom.proxyvpn.BuildConfig.BASE_URL3
+import com.piperbloom.proxyvpn.BuildConfig.BASE_URL4
 import com.piperbloom.proxyvpn.util.SiteChecker
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
@@ -30,8 +31,8 @@ object RetrofitClient {
                 val urls = listOf(BASE_URL1, BASE_URL2, BASE_URL3)
                 // TODO: Fetch url based on connection status
                 activeBaseUrl = SiteChecker().getFirstActiveUrl(urls) ?: BASE_URL1
-                // Temporary fix to use currently active url [BASE_URL_2]
-                activeBaseUrl = BASE_URL1
+                // Temporary fix to use currently active url [BASE_URL_4]
+                activeBaseUrl = BASE_URL4
                 okHttpClient = OkHttpClient.Builder()
                     .addInterceptor(ChuckerInterceptor(context))
                     .build()

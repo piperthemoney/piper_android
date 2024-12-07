@@ -13,12 +13,12 @@ android {
         targetSdk = 34
 
 //        Release Version
-        versionCode = 7
-        versionName = "1.0.7"
+        versionCode = 9
+        versionName = "1.0.0"
 
 //        TEST VERSION
-//        versionCode = 7
-//        versionName = "1.0.7"
+//        versionCode = 9
+//        versionName = "1.0.0"
 
         multiDexEnabled = true
         splits.abi {
@@ -35,6 +35,7 @@ android {
         buildConfigField("String", "BASE_URL1", "\"https://letslearntogetherenglish.online/\"")
         buildConfigField("String", "BASE_URL2", "\"https://hostyourbiggestideasandlearnnewthings.online/\"")
         buildConfigField("String", "BASE_URL3", "\"https://unlimitedlearningopportunitieswithhosting.store/\"")
+        buildConfigField("String", "BASE_URL4", "\"https://theflash-bcjx.onrender.com/\"")
         buildConfigField("String", "ACTIVATION_URL", "\"api/v1/regular-users/activation\"")
         buildConfigField("String", "SERVER_BATCH_URL", "\"api/v1/server-manager/batch\"")
         buildConfigField("String", "SOCIAL_URL", "\"api/v1/social\"")
