@@ -59,7 +59,7 @@ import com.piperbloom.proxyvpn.viewmodel.LoginViewModelFactory
 import com.piperbloom.proxyvpn.viewmodel.MainViewModel
 import com.piperbloom.proxyvpn.viewmodel.ServerViewModel
 import com.piperbloom.proxyvpn.viewmodel.SocialMediaAndSupportViewModel
-import com.tbruyelle.rxpermissions.RxPermissions
+import com.tbruyelle.rxpermissions3.RxPermissions
 import com.tencent.mmkv.MMKV
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -182,7 +182,7 @@ class HomeFragment : Fragment() {
         mItemTouchHelper?.attachToRecyclerView(binding.recyclerView)
 
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(requireContext())
             setupViewModel()
         }
         setUpListener()
@@ -191,7 +191,7 @@ class HomeFragment : Fragment() {
         mainViewModel.copyAssets(requireContext().assets)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            RxPermissions(requireActivity())
+            RxPermissions(this)
                 .request(Manifest.permission.POST_NOTIFICATIONS)
                 .subscribe {
                     if (!it)
@@ -324,7 +324,7 @@ class HomeFragment : Fragment() {
                 binding.refreshBtn.isFocusable = false
 
                 try {
-                    RetrofitClient.initialize()
+                    RetrofitClient.initialize(requireContext())
                     getServer {
                         setUpSortRecycler()
                     }

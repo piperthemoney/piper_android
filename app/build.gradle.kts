@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.piperbloom.proxyvpn"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.piperbloom.proxyvpn"
@@ -13,12 +13,12 @@ android {
         targetSdk = 34
 
 //        Release Version
-//        versionCode = 4
-//        versionName = "1.0.4"
+        versionCode = 9
+        versionName = "1.0.0"
 
 //        TEST VERSION
-        versionCode = 3
-        versionName = "1.0.3"
+//        versionCode = 9
+//        versionName = "1.0.0"
 
         multiDexEnabled = true
         splits.abi {
@@ -35,6 +35,7 @@ android {
         buildConfigField("String", "BASE_URL1", "\"https://letslearntogetherenglish.online/\"")
         buildConfigField("String", "BASE_URL2", "\"https://hostyourbiggestideasandlearnnewthings.online/\"")
         buildConfigField("String", "BASE_URL3", "\"https://unlimitedlearningopportunitieswithhosting.store/\"")
+        buildConfigField("String", "BASE_URL4", "\"https://theflash-bcjx.onrender.com/\"")
         buildConfigField("String", "ACTIVATION_URL", "\"api/v1/regular-users/activation\"")
         buildConfigField("String", "SERVER_BATCH_URL", "\"api/v1/server-manager/batch\"")
         buildConfigField("String", "SOCIAL_URL", "\"api/v1/social\"")
@@ -105,7 +106,7 @@ android {
             buildConfig = true
         }
 
-        packagingOptions {
+        packaging {
             jniLibs {
                 useLegacyPackaging = true
             }
@@ -117,38 +118,40 @@ android {
         testImplementation("junit:junit:4.13.2")
 
         // Androidx
-        implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+        implementation("androidx.constraintlayout:constraintlayout:2.2.0")
         implementation("androidx.legacy:legacy-support-v4:1.0.0")
         implementation("androidx.appcompat:appcompat:1.7.0")
         implementation("com.google.android.material:material:1.12.0")
         implementation("androidx.cardview:cardview:1.0.0")
         implementation("androidx.preference:preference-ktx:1.2.1")
         implementation("androidx.recyclerview:recyclerview:1.3.2")
-        implementation("androidx.fragment:fragment-ktx:1.8.1")
+        implementation("androidx.fragment:fragment-ktx:1.8.5")
         implementation("androidx.multidex:multidex:2.0.1")
         implementation("androidx.viewpager2:viewpager2:1.1.0")
 
         // Androidx ktx
-        implementation("androidx.activity:activity-ktx:1.9.0")
-        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
-        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.2")
-        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.2")
+        implementation("androidx.activity:activity-ktx:1.9.3")
+        implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+        implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.7")
+        implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
 
         //kotlin
-        implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.23")
+        implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.20")
         implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
-        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 
-        implementation("com.tencent:mmkv-static:1.3.4")
+        implementation("com.tencent:mmkv-static:1.3.9")
         implementation("com.google.code.gson:gson:2.11.0")
         implementation("io.reactivex:rxjava:1.3.8")
         implementation("io.reactivex:rxandroid:1.2.1")
-        implementation("com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar")
+        implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
+        implementation("io.reactivex.rxjava3:rxjava:3.1.5")
+        implementation("com.github.tbruyelle:rxpermissions:0.12@aar")
         implementation("me.drakeet.support:toastcompat:1.1.0")
         implementation("com.blacksquircle.ui:editorkit:2.9.0")
         implementation("com.blacksquircle.ui:language-base:2.9.0")
         implementation("com.blacksquircle.ui:language-json:2.9.0")
-        implementation("io.github.g00fy2.quickie:quickie-bundled:1.9.0")
+        implementation("io.github.g00fy2.quickie:quickie-bundled:1.10.0")
         implementation("com.google.zxing:core:3.5.3")
 
         implementation("androidx.work:work-runtime-ktx:2.8.1")
@@ -169,11 +172,16 @@ android {
 
         implementation("cat.ereza:customactivityoncrash:2.3.0")
 
+        // Network interceptor
+        debugImplementation ("com.github.chuckerteam.chucker:library:4.0.0")
+        releaseImplementation ("com.github.chuckerteam.chucker:library-no-op:4.0.0")
+        implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
     }
 }
 dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
     implementation("org.chromium.net:cronet-embedded:119.6045.31")
 }

@@ -34,7 +34,7 @@ class AngApplication : MultiDexApplication(), Configuration.Provider {
         super.onCreate()
 
         CoroutineScope(Dispatchers.Main).launch {
-            RetrofitClient.initialize()
+            RetrofitClient.initialize(applicationContext)
         }
 
         MMKV.initialize(this)
